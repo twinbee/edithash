@@ -1,4 +1,4 @@
-package us.winborn.edithash;
+package org.h3.edithash;
 
 import java.text.ParseException;
 
@@ -118,10 +118,6 @@ public class StringParser {
          throw new TimeParseException("Missing colan", timeString);
       } else {
          ++j;
-
-         int i;
-         for(i = j; j < s.length() && Character.isDigit(s.charAt(j)); ++j) {
-         }
 
          if (j - i != 2) {
             throw new TimeParseException("Minutes must be 2 digits", timeString);

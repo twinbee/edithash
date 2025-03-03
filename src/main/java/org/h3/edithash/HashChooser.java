@@ -1,4 +1,4 @@
-package us.winborn.edithash;
+package org.h3.edithash;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -40,7 +40,7 @@ public class HashChooser extends JDialog {
       super(frame, true);
       this.setDefaultCloseOperation(0);
       this.addWindowListener(new HashChooser.Closelistener());
-      this.strings = ResourceBundle.getBundle("us.winborn.edithash.strings");
+      this.strings = ResourceBundle.getBundle("org.h3.edithash.strings");
       this.chooserX = Integer.parseInt(this.strings.getString("chooserX"));
       this.chooserY = Integer.parseInt(this.strings.getString("chooserY"));
       this.chooserW = Integer.parseInt(this.strings.getString("chooserW"));

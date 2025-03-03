@@ -1,4 +1,4 @@
-package us.winborn.library;
+package org.h3.library;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -213,8 +213,8 @@ public class Prefer extends JDialog {
          } else if (b instanceof Prefer.IntegerBox) {
             Prefer.IntegerBox box = (Prefer.IntegerBox)b;
             key = box.getKey();
-            int defaultValue = box.getDefaultValue();
-            box.setInt(this.preferences.getInt(key, defaultValue));
+            int defaultValue1 = box.getDefaultValue();
+            box.setInt(this.preferences.getInt(key, defaultValue1));
             editPanel.add(box);
          } else if (b instanceof Prefer.ChoiceBox) {
             Prefer.ChoiceBox box = (Prefer.ChoiceBox)b;

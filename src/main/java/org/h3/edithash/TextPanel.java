@@ -1,4 +1,4 @@
-package us.winborn.edithash;
+package org.h3.edithash;
 
 import java.awt.Color;
 import java.awt.FlowLayout;

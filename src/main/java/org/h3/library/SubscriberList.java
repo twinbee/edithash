@@ -1,4 +1,4 @@
-package us.winborn.library;
+package org.h3.library;
 
 public class SubscriberList {
    protected volatile Object[] list = new Object[0];

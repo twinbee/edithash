@@ -1,11 +1,5 @@
-package us.winborn.edithash;
+package org.h3.edithash;
 
-import com.apple.eawt.AboutHandler;
-import com.apple.eawt.AppEvent;
-import com.apple.eawt.Application;
-import com.apple.eawt.PreferencesHandler;
-import com.apple.eawt.QuitHandler;
-import com.apple.eawt.QuitResponse;
 import com.toedter.calendar.JCalendar;
 import com.toedter.calendar.JDayChooser;
 import java.awt.Color;
@@ -33,9 +27,9 @@ import javax.swing.JOptionPane;
 import javax.swing.JSplitPane;
 import javax.swing.KeyStroke;
 import javax.swing.SwingUtilities;
-import us.winborn.library.AboutBox;
-import us.winborn.library.Prefer;
-import us.winborn.library.Traffic;
+import org.h3.library.AboutBox;
+import org.h3.library.Prefer;
+import org.h3.library.Traffic;
 
 public class EditHash extends JFrame implements PropertyChangeListener {
    private JCalendar calendarPanel;
@@ -54,7 +48,7 @@ public class EditHash extends JFrame implements PropertyChangeListener {
 
    public EditHash() throws HeadlessException {
       try {
-         this.resbundle = ResourceBundle.getBundle("us.winborn.edithash.strings");
+         this.resbundle = ResourceBundle.getBundle("org.h3.edithash.strings");
          this.setupPreferences();
          this.setupMenus();
          this.setTitle(this.resbundle.getString("mainTitle"));
@@ -66,7 +60,7 @@ public class EditHash extends JFrame implements PropertyChangeListener {
          this.calendarPanel = new JCalendar();
          Calendar calendar = this.calendarPanel.getCalendar();
          TimeZone timeZone = calendar.getTimeZone();
-         TimeZone timeZone = new SimpleTimeZone(-21600000, "America/Dallas", 2, 8, -1, 7200000, 10, 1, -1, 7200000, 3600000);
+         timeZone = new SimpleTimeZone(-21600000, "America/Dallas", 2, 8, -1, 7200000, 10, 1, -1, 7200000, 3600000);
          calendar.setTimeZone(timeZone);
          JDayChooser chooser = this.calendarPanel.getDayChooser();
          chooser.setWeekOfYearVisible(false);
@@ -94,26 +88,6 @@ public class EditHash extends JFrame implements PropertyChangeListener {
    }
 
    public void setupMenus() {
-      boolean isMAC = System.getProperty("os.name").toLowerCase().contains("mac");
-      if (isMAC) {
-         Application macApp = Application.getApplication();
-         macApp.setPreferencesHandler(new PreferencesHandler() {
-            public void handlePreferences(AppEvent.PreferencesEvent e) {
-               EditHash.this.prefer.showPreferences("Edit Preferences");
-               EditHash.this.checkLocalDir();
-            }
-         });
-         macApp.setAboutHandler(new AboutHandler() {
-            public void handleAbout(AppEvent.AboutEvent e) {
-               new AboutBox(EditHash.this.resbundle.getString("appName"), EditHash.this.resbundle.getString("appVersion"), EditHash.this.resbundle.getString("created"));
-            }
-         });
-         macApp.setQuitHandler(new QuitHandler() {
-            public void handleQuitRequestWith(AppEvent.QuitEvent e, QuitResponse response) {
-               response.performQuit();
-            }
-         });
-      } else {
          this.fileMenu = new JMenu(this.resbundle.getString("fileMenu"));
          mainMenuBar.add(this.fileMenu);
          this.editMenu = new JMenu(this.resbundle.getString("editMenu"));
@@ -125,7 +99,6 @@ public class EditHash extends JFrame implements PropertyChangeListener {
          this.helpMenu = new JMenu(this.resbundle.getString("helpMenu"));
          this.helpMenu.add(new JMenuItem(new EditHash.AboutActionClass()));
          mainMenuBar.add(this.helpMenu);
-      }
 
       this.setJMenuBar(mainMenuBar);
    }

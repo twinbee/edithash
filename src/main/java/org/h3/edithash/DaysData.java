@@ -1,4 +1,4 @@
-package us.winborn.edithash;
+package org.h3.edithash;
 
 public class DaysData implements Comparable<DaysData> {
    private String[] sa;

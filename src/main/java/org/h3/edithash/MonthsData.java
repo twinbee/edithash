@@ -1,4 +1,4 @@
-package us.winborn.edithash;
+package org.h3.edithash;
 
 import java.io.BufferedReader;
 import java.io.File;

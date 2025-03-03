@@ -1,4 +1,4 @@
-package us.winborn.edithash;
+package org.h3.edithash;
 
 import java.io.File;
 import java.util.Calendar;
@@ -9,12 +9,12 @@ import java.util.TimeZone;
 import java.util.Vector;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-import us.winborn.library.Prefer;
-import us.winborn.library.Traffic;
+import org.h3.library.Prefer;
+import org.h3.library.Traffic;
 
 public class ReaderGenerator {
    public ReaderGenerator(Calendar calendar, Prefer prefer, EditHash frame, Traffic traffic) throws Exception {
-      ResourceBundle strings = ResourceBundle.getBundle("us.winborn.edithash.strings");
+      ResourceBundle strings = ResourceBundle.getBundle("org.h3.edithash.strings");
       String username = prefer.getText("username");
       String password = prefer.getText("password");
       String host = prefer.getText("host");
@@ -82,7 +82,7 @@ public class ReaderGenerator {
                int sts = JOptionPane.showConfirmDialog(frame, "Would you like to upload changes to the host?", "Warning", 0, 2);
                if (sts == 0) {
                   String[] files = new String[]{newfileName};
-                  new FTPUpload(frame, prefer.getText("username"), prefer.getText("password"), prefer.getText("host"), prefer.getText("hostDir"), localDir, files, traffic, FTPUpload.TYPE_ASCII);
+                  new FTPUpload(prefer.getText("host"), prefer.getText("username"), prefer.getText("password") );
                }
             }
          }

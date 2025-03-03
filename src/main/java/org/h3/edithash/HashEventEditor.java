@@ -1,4 +1,4 @@
-package us.winborn.edithash;
+package org.h3.edithash;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -25,12 +25,13 @@ import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
 import javax.swing.SwingUtilities;
 import javax.swing.filechooser.FileNameExtensionFilter;
-import us.winborn.library.ItemLayout;
-import us.winborn.library.Prefer;
-import us.winborn.library.Traffic;
+import org.h3.library.ItemLayout;
+import org.h3.library.Prefer;
+import org.h3.library.Traffic;
 
 public class HashEventEditor extends JDialog {
-   private JFrame frame;
+   private static final long serialVersionUID = 8948782060613226112L;
+private JFrame frame;
    private DaysData daysData;
    private TextPanel kennelName;
    private TextPanel iconName;
@@ -79,7 +80,7 @@ public class HashEventEditor extends JDialog {
       this.daysData = daysData;
       this.calendar = calendar;
       this.traffic = traffic;
-      this.resbundle = ResourceBundle.getBundle("us.winborn.edithash.strings");
+      this.resbundle = ResourceBundle.getBundle("org.h3.edithash.strings");
       this.doTweet = prefer.getBoolean("tweet");
       this.editHeight = prefer.getInt("editHeight");
       this.editWidth = prefer.getInt("editWidth");
@@ -362,7 +363,7 @@ public class HashEventEditor extends JDialog {
             HashEventEditor.this.iconName.setText(file.getName());
             String localDirPath = file.getParentFile().getAbsolutePath();
             String[] files = new String[]{file.getName()};
-            new FTPUpload(HashEventEditor.this.frame, HashEventEditor.this.username, HashEventEditor.this.password, HashEventEditor.this.host, hostDirPath, localDirPath, files, HashEventEditor.this.traffic, FTPUpload.TYPE_BINARY);
+            new FTPUpload(HashEventEditor.this.host, HashEventEditor.this.username, HashEventEditor.this.password);
          }
 
       }
