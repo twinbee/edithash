@@ -1,0 +1,22 @@
+### Compiled files ###
+*.class
+*.jar
+*.war
+*.ear
+
+### Maven target directory ###
+/target/
+
+### IDE files ###
+/.idea/
+*.iml
+*.ipr
+*.iws
+
+### Logs ###
+logs/
+*.log
+
+### OS-specific files ###
+.DS_Store
+Thumbs.db

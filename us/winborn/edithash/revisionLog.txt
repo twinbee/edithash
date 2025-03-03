@@ -1,0 +1,128 @@
+Version 1.3 — Oct 11, 2012 to Jan 24, 2013
+	Added Prefer to support preferences
+	Added FTP traffic window
+	Changed the way the user enters a second event for the day from an annoying prompt to a button
+	Added automatic upload option
+	Added automatic download option
+	Added tweet option
+	Added prompt if local directory does not exist
+	Position and size adjustment of HashChooser added to strings
+	Position and size adjustment of FTPTraffic added to strings
+	Changed FTP libraries and completely rewrote FTPUpload
+	Added FTPDownload to support downloading
+	
+Version 1.4 — Feb 25, 2013
+	Modified Prefer to make it configurable through external calls.
+	Removed the annoying "Would you like to download the latest data from the host?" prompt
+	Changed FTPDownload to block until the download is complete.
+	Moved Download from once in EditHash to whenever ReaderGenerator is called.
+	Added Full Moon Hash
+	
+Version 1.5 — Feb 25, 2013 to Mar 2, 2013
+	Modified build.xml to produce a double clickable Mac OS App
+		Removed package name winborn
+		Added AboutBox
+		Modified EditHash to configure the "About" and "Preferences" menu items based on platform
+	Improved error handling in FTPDownload
+	
+Version 1.6 — Mar 2, 2013 to Nov 20, 2013
+	Modified TextPanel to change the background color to pink if character limit exceeded.
+	Moved FTPTraffic from a separate pane to a splitpane with MyDayChooser
+	Added MyDayChooser 
+	Added an "Updated" time stamp to the database.
+	Modified HashEventEditor to alow sizing via preferences.
+	Added integer type to Prefer
+	Added character limit flagging for tweets
+	Prompt user if he has unsaved changes when pressing the "Next" or "Submit" Button
+	if auto upload is off, made the prompt "Would you like to upload changes to the host?" optional
+
+Version 1.7 — Dec 16, 2013
+	Upgraded to Java 1.7
+	Changed source package name to us.winborn
+	Changed images package name to us.winborn.images
+	modified build.xml to build the Mac OSX app using the task AppBuilderTask needed for java 1.7
+	
+Version 1.8 — Apr 8, 2014
+	Converted to Java 1.7
+	
+Version 1.9 — Apr 8, 2014
+	Modified OS test to use System.properties("os.name") rather than getApplication() == null
+
+Version 1.10 — May 22, 2014
+	Modified to implement the improvements that were made when adapting this application for 
+	us.hoffen.CalendarEdit. No longer writes old file formats.
+
+Version 1.11 — June 4, 2014
+	Modified to tack the username of the user making the edits, onto the "Updated:" field.
+	
+Version 1.12 — June 19, 2014
+	Added a dialog box to warn the user when autodown is not enabled.
+	Modified dialog box designed to make sure the local directory exists.
+	Modified LocalDir preference to substitute the user's home directory for "~" in defaultLocalDir
+	Added preference editWidth to vary event editor width.
+	Fixed event editor to scroll to top when created.
+	Fixed problem with Preferences panel
+	
+Version 1.13 — June 21, 2014
+	Changed the preferences section to make a somewhat intelligent decision as to where the default
+	location of the data directory, EditHash, should be located.		
+	
+Version 1.14 — June 22, 2014
+	Preferences are now checked often — especially to make sure the local directory exists.
+	
+Version 1.15 — June 26, 2014
+	Removed date and twilight from Hash Event Editor Pane. There is no reason to edit these.
+	Changed the order of the items in the HashEventEditor to more closely match the web page.
+	
+Version 1.16 — July 1, 2014
+	Changed DaysData.getHeader() to correct the header for the DATE column.
+	
+Version 1.17 — Sept 7, 2014
+	Changed package name to us.winborn.edithash to avoid conflicts because RunNumber includes
+	EditHash.jar to pick up current versions of DaysData, MonthData and StringParser
+	
+Version 1.18 — October 23, 2014
+	Added preference "myName" to the preferences, to allow the user to customize the name that
+	appears on posts.
+	
+Version 1.19 — October 29, 2014
+	Added "Pub Crawl", "Full Moon", "Happy Birthday HH", "Poker Night", "Trivia Tuesdays" to
+	the Hash Chooser.
+	
+Version 1.20 — November 2, 2014
+	Modified StringParser.text2html() to convert tabs to spaces, 
+	so the database won't be corrupted by unwanted tabs. 
+	
+Version 1.21 — December 8, 2014
+	Modified DaysData, Kennelbutton, ReaderGenerator, HashChooser, and created Templates, to make 
+		it easier to add/remove/rename database table entries and to improve the way default entries are set. 
+	Renamed the database field "TYPE" to "ICON", which will always contain an icon file name.
+	Modified Edithash and updated the JCalendar library, to improve the date chooser display.
+	Changed the default local directory to ~/EditHash. Set the default password and username to "".
+	
+Version 1.22 — January 9, 2015
+	Modified to add the capability to upload an icon to the website.
+	
+Version 1.24 — January 14, 2015
+	Fixed bug in DaysData where turds was not being set by the setter.
+	
+Version 1.25 — February 24, 2015
+	Fixed bug in ReaderGenerator:generateDaysData() where the timezone name from the default 
+	was not being overridden.
+	
+Version 1.26 — April 16, 2015
+	Fixed start time and removed BYOB for defaults: Sunday Brunch
+	Fixed bug in StringParser.parseTime() which was calculating AM PM incorrectly
+	Updated the defaults.text file to remove BYOB and fix start time and for Sunday Brunch.
+	Updated the defaults.text file to add the DUMB Hash
+
+Version 1.27 — May 23, 2015
+	Added "svg" to the list of icon file formats that can be uploaded.
+	
+Version 1.28 — May 24, 2015
+	Updated the defaults.txt file and loaded the appropriate images.
+	Modified KennelButton to support SVG image files.
+	Modified StringParser.parseTime() to remove HTML tags before parsing the time.
+	Modified DaysData to remove CDT and CST from the time. 
+	Shortened the "updated" string and added version number on the end
+	

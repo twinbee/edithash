@@ -1,0 +1,19 @@
+DAY	KENNEL	ICON	TITLE	RUN	HARES	TIME	START	MAP	HASHCASH	TURDS	TWEET	TWILIGHT	DATE	DESC	UPDATE
+01	Bike Hash	bikeHash.png				1:00 PM			$3.00
+02	Contra Hash	contra.svg				3:00 PM			BYOB
+03	Dallas Hash	dallas.png				3:00 PM			$7.00
+04	Dallas Urban Mountain Bike Hash	DUMB.png				7:00 PM CST			Pay-as-you-go						
+05	Dallas Urban Hash	DUH.png				7:00 PM			$7.00
+06	FU! Thursday is a Drinking Day!	fuBird.png				7:00 PM
+07	FU H3 Hash	fuh3.png				7:00 PM
+08	Full Moon	fullmoon.png				7:00 PM			BYOB
+09	Fort Worth Hash	ftworth.png				3:00 PM			$7.00 &mdash; BYOB prelube beer
+10	Grapevine Quarterly	GQhash.png				7:00 PM			BYOB
+11	Happy Birthday Happy Hour	happyBirthday.png				7:00 PM
+12	Happy Hour	happy3.png				7:00 PM
+13	Movie Night	Movie.png			Anal Thrax<br />I-I-I	6:00 PM	<br />Los Lupes & AMC 14<br />Irving Mall<br />3644 Irving Mall<br />Irving, TX 75062	https://www.google.com/maps/place/Irving+Mall/@32.8403959,-96.9966674,17z/data=!3m1!4b1!4m2!3m1!1s0x864e822d65725267:0xc2134946d94956ad						Anal Thrax – Movie HH at Los Lupes at 6:00 or sooner.  HH prices until 7:00.  <br /><br />(same location as Fuddruckers). This place is busy, it’s hopping. A great place.<br /><br />Then see “XXXXXX” at Irving Mall AMC!  Deets on showtime coming!
+14	NODUH Hash	NoDHHH2.png				7:00 PM			$7.00
+15	Poker Night	poker.png				7:00 PM			BYOB
+16	Sunday Brunch	Brunch.png				11:00 AM
+17	Spit Hash	spit.png				7:00 PM			BYOB
+18	Trivia Tuesdays	triviaTuesdays.png	Malarkey’s Tavern		Team H<sup>3</sup>	7:00 PM	<br /><br /><a href="http://www.malarkeystavern.com/">Malarkey's Tavern</a><br /><br />4460 Trinity Mills Rd<br />Dallas, TX 75287	https://www.google.com/maps/place/Malarkey%27s+Tavern/@32.989746,-96.831213,17z/data=!3m1!4b1!4m2!3m1!1s0x864c23f9148e0fcb:0x3d508e132e71713d						Tonight is Trivia Tuesday at Malarkey's off Tollway and Trinity Mills. Starts at 7:30. Cum play with us. Also get there early if you can. Hope to see you tonight!
